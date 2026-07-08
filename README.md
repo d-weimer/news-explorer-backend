@@ -14,3 +14,7 @@ The backend will have two components:
 
 - User authentication and authorization
 - Saving and deleting articles
+
+## Frontend repository
+
+- https://github.com/d-weimer/news-explorer-app
