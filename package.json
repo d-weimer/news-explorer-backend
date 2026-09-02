@@ -1,0 +1,38 @@
+{
+  "name": "news-explorer-backend",
+  "version": "1.0.0",
+  "description": "News Explorer is a React application that allows users to search for articles by keyword using this [News API](https://newsapi.org/). This option requires careful attention to detail and strict guidelines. We’ll provide a detailed Figma layout and instructions similar to those in your earlier projects.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-weimer/news-explorer-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/d-weimer/news-explorer-backend/issues"
+  },
+  "homepage": "https://github.com/d-weimer/news-explorer-backend#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "celebrate": "^16.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.4",
+    "validator": "^13.15.35",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.9.1",
+    "nodemon": "^3.1.14"
+  }
+}
