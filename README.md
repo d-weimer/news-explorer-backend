@@ -1,19 +1,29 @@
 # News Explorer: Backend
 
-The back-end project is focused on creating a server for the News Explorer application. You’ll gain a deeper understanding of how to work with databases, set up security and testing, and prepare the web application for deployment on a remote machine. The main goal is to create a secure RESTful server with an API, user authorization, and centralized error handling.
+The back-end project is focused on creating a server for the News Explorer application. It provides a secure RESTful API with user authorization, database persistence, logging, and centralized error handling, fully deployed on a Google Cloud Platform (GCP) Ubuntu instance.
+
+## Live Application & API Endpoints
+
+- **Frontend Application:** [https://djw-newsexplorer.jumpingcrab.com](https://djw-newsexplorer.jumpingcrab.com)
+- **Backend API:** [https://api.djw-newsexplorer.jumpingcrab.com](https://api.djw-newsexplorer.jumpingcrab.com)
 
 ## Technologies and Techniques Used
 
-**Backend development:**
+**Backend Development & Security:**
 
-- **Node.js & Express:** Used to set up the server and create routes to separate endpoint paths from the controller logic.
-- **MongoDB & Mongoose:** A NoSQL database used with Mongoose schemas to validate incoming data before saving anything to the database.
-- **JWT & bcryptjs:** JSON Web Tokens used for user authentication and state authorization, paired with `bcryptjs` for secure password hashing.
-- **Celebrate & Joi:** Integrated middleware used to validate incoming HTTP request payloads, parameters, and headers before reaching controllers.
-- **Winston & express-winston:** Logging framework used to track incoming server requests (`request.log`) and catch unhandled application errors (`error.log`).
-- **Postman:** Used to test all the API endpoints, mock request data, and make sure custom HTTP error status codes are working properly.
-- **ESLint:** Used to catch code errors early and enforce a clean and consistent coding style across the project.
-- **Nodemon:** Added as a development dependency to automatically restart the server whenever code changes are saved.
+- **Node.js & Express:** Configured on port `3002` to handle incoming HTTP requests and route controller logic.
+- **MongoDB & Mongoose:** NoSQL database used with Mongoose schemas to validate incoming data before saving to the database.
+- **JWT & bcryptjs:** JSON Web Tokens for state authorization, paired with `bcryptjs` for password hashing.
+- **Celebrate & Joi:** Middleware used to validate incoming HTTP request payloads, parameters, and headers before reaching controllers.
+- **Winston & express-winston:** Logging framework tracking incoming server requests (`request.log`) and catching unhandled errors (`error.log`).
+- **ESLint & Nodemon:** ESLint enforces clean code formatting, while Nodemon handles hot reloading during local development.
+
+**Deployment & Infrastructure:**
+
+- **Google Cloud Platform (GCP):** Hosted on an Ubuntu 24.04 VM instance.
+- **Nginx:** Configured as a reverse proxy to manage incoming traffic, route API requests to port `3002`, and serve static frontend builds.
+- **Certbot (Let's Encrypt):** SSL/TLS certificates provisioned to enforce HTTPS security across domains.
+- **PM2:** Node process manager running the server in the background with auto-restart enabled.
 
 ## API Functionality Overview
 
